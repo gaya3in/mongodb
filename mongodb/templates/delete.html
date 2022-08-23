@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+      <h1>DELETE EMPLOYEE</h1>
+    <form method="POST">
+        {% csrf_token %}
+        Ae you sure you want to delete Employee {{employee.first_name}} {{employee.last_name}}?
+        <br><br>
+        <a type="button" class="btn btn-danger" href="{% url 'home' %}">CANCEL</a>
+        <input type="submit" value="DELETE">
+    </form>
+{% endblock %}

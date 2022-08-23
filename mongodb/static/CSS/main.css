@@ -1,0 +1,25 @@
+#emp_list{
+  width: 70%;
+  float: center;
+  margin: 20px;
+}
+
+#list{
+ list-style: none;
+ text-align: center;
+ background-color: rgb(140,1,178);
+}
+
+.buttons
+{
+ float: right;
+ height: 30%;
+ margin-right: 10px;
+ background-color: lightgreen;
+ border-radius: 20px;
+}
+
+.btncan
+{
+ display: inline-block;
+}

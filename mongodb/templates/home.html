@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load mongodb_tags %}
+{% block content %}
+    <div id="emp_list">
+         <ul id="list">
+             {% for employee in employees %}
+             <li class="form-control">
+                 <span>{{employee.first_name}}</span>
+                 <span>{{employee.last_name}}</span>
+                 <span>{{employee.email_id}}</span>
+                 <button class="buttons"><a href="{% url 'delete' employee|mongo_id %}">Delete</a></button>
+                 <button class="buttons"><a href="{% url 'update' employee|mongo_id %}">Update</a></button>
+             </li>
+             {% endfor %}
+         </ul>
+     </div>
+{% endblock %}

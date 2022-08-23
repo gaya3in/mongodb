@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+      <h1>ADD EMPLOYEE</h1>
+    <form method="POST" action="create">
+        {% csrf_token %}
+       {{form.as_p}}
+      <input type="submit" value="ADD">
+    </form>
+    {% if form.errors %}
+       <p>{{form.errors}}</p>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+      <h1>UPDATE EMPLOYEE</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <p class="form-control">First Name: {{form.first_name}}</p>
+            <p class="form-control">Last Name: {{form.last_name}}</p>
+            <p class="form-control">Last Name: {{form.email_id}}</p>
+            <p class="form-control">Phone: {{form.phone}}</p>
+            <p class="form-control">Address: {{form.address}}</p>
+            <p class="form-control">City: {{form.city}}</p>
+            <p class="form-control">State: {{form.state}}</p>
+            <p class="form-control">Zip: {{form.zipcode}}</p>
+        </div>
+       <input type="submit" value="UPDATE">
+    </form>
+    {% if form.errors %}
+       <p>{{form.errors}}</p>
+    {% endif %}
+{% endblock %}
